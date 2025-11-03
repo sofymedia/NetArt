@@ -17,7 +17,7 @@ st.write("Current working directory:", os.getcwd())
 st.write("Files in current directory:", os.listdir())
 
 #The first Roary image
-st.image("RoaryWelcomeWIP.png")
+st.image("/mount/src/netart/RoaryWelcomeWIP.png")
 
 st.write("\"Hello! What's your name?\"")
 
@@ -27,6 +27,7 @@ if "name" not in st.session_state:
 st.session_state.name = st.text_input("Enter name",label_visibility="hidden",placeholder="Enter...")
 if st.button("Next ➡"):
     st.switch_page("pages/page2.py")
+
 
 
 
