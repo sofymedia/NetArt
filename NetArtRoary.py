@@ -1,4 +1,5 @@
 import streamlit as st
+import os
 
 #Sets up site characteristics
 st.set_page_config(page_title="Counseling", page_icon="🐆", layout="centered", 
@@ -13,6 +14,12 @@ st.write("*A Work-in-Progress Internet Art Project by Sofya Mashukova*")
 st.divider()
 #The first Roary image
 st.image("RoaryWelcomeWIP.png")
+
+#ChatGPT troubleshooting tips
+st.write("Current working directory:", os.getcwd())
+st.write("Files in current directory:", os.listdir())
+
+
 st.write("\"Hello! What's your name?\"")
 
 if "name" not in st.session_state:
@@ -21,6 +28,7 @@ if "name" not in st.session_state:
 st.session_state.name = st.text_input("Enter name",label_visibility="hidden",placeholder="Enter...")
 if st.button("Next ➡"):
     st.switch_page("pages/page2.py")
+
 
 
 
